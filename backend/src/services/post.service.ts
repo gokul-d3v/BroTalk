@@ -1,21 +1,20 @@
-import { supabase } from "../config/supabase";
+import sql from "../config/db";
 
 export class PostService {
   static async getAllPosts() {
-    const { data, error } = await supabase
-      .from("posts")
-      .select("*")
-      .order("created_at", { ascending: false });
-    if (error) throw error;
+    const data = await sql`
+      SELECT * FROM posts 
+      ORDER BY created_at DESC
+    `;
     return data;
   }
 
   static async createPost(title: string, content: string, community_id?: string) {
-    const { data, error } = await supabase
-      .from("posts")
-      .insert([{ title, content, community_id }])
-      .select();
-    if (error) throw error;
+    const data = await sql`
+      INSERT INTO posts (title, content, community_id)
+      VALUES (${title}, ${content}, ${community_id || null})
+      RETURNING *
+    `;
     return data[0];
   }
 }

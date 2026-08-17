@@ -113,3 +113,31 @@
       linear-gradient(to bottom, var(--color-surface-container-highest) 1px, transparent 1px);
   background-size: 64px 64px;
 }
+
+/* Home Page specific styles */
+.glass-panel {
+  background: rgba(246, 243, 239, 0.6); /* surface-container-low */
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(140, 113, 109, 0.15); /* outline */
+}
+.dark .glass-panel {
+  background: rgba(228, 226, 223, 0.6); /* surface-container-highest */
+  border: 1px solid rgba(140, 113, 109, 0.2);
+}
+.technical-line-v {
+  width: 1px;
+  background: rgba(140, 113, 109, 0.2);
+  height: 100%;
+}
+.technical-line-h {
+  height: 1px;
+  background: rgba(140, 113, 109, 0.2);
+  width: 100%;
+}
+.instrumentation-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #aa2d27; /* primary */
+}
