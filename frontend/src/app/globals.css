@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --color-error: #ba1a1a;
+  --color-primary-container: #cc463d;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed-dim: #ffb4ab;
+  --color-surface-container-low: #f6f3ef;
+  --color-error-container: #ffdad6;
+  --color-on-primary-fixed-variant: #8c1615;
+  --color-surface-dim: #dcdad6;
+  --color-tertiary: #695a41;
+  --color-surface: #fbf9f5;
+  --color-on-primary-fixed: #410002;
+  --color-surface-container-highest: #e4e2df;
+  --color-outline-variant: #e0bfbb;
+  --color-tertiary-fixed: #f6dfc0;
+  --color-surface-variant: #e4e2df;
+  --color-on-error: #ffffff;
+  --color-on-tertiary-fixed: #251a07;
+  --color-secondary-container: #ff9286;
+  --color-secondary-fixed: #ffdad5;
+  --color-surface-tint: #ae302a;
+  --color-secondary-fixed-dim: #ffb4aa;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-secondary-fixed: #400102;
+  --color-on-tertiary-container: #fffbff;
+  --color-on-primary-container: #fffbff;
+  --color-on-secondary: #ffffff;
+  --color-on-primary: #ffffff;
+  --color-inverse-primary: #ffb4ab;
+  --color-inverse-surface: #30302e;
+  --color-surface-container-high: #eae8e4;
+  --color-on-secondary-fixed-variant: #7c2c25;
+  --color-surface-bright: #fbf9f5;
+  --color-on-surface: #1b1c1a;
+  --color-outline: #8c716d;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #837258;
+  --color-primary-fixed: #ffdad6;
+  --color-on-secondary-container: #782922;
+  --color-secondary: #9b433a;
+  --color-primary: #aa2d27;
+  --color-on-background: #1b1c1a;
+  --color-inverse-on-surface: #f3f0ed;
+  --color-tertiary-fixed-dim: #d9c4a5;
+  --color-surface-container: #f0edea;
+  --color-on-tertiary-fixed-variant: #53452e;
+  --color-background: #fbf9f5;
+  --color-on-surface-variant: #59413e;
+
+  --spacing-margin-mobile: 20px;
+  --spacing-gutter: 24px;
+  --spacing-section-gap: 120px;
+  --spacing-margin-desktop: 64px;
+  --spacing-base: 8px;
+
+  --font-label-mono: "Inter", sans-serif;
+  --font-headline-lg-mobile: "Inter", sans-serif;
+  --font-body-base: "Inter", sans-serif;
+  --font-label-caps: "Inter", sans-serif;
+  --font-headline-lg: "Inter", sans-serif;
+  --font-display-lg: "Inter", sans-serif;
+}
+
+@layer utilities {
+  .font-label-mono {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+  }
+  .font-headline-lg-mobile {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+  .font-body-base {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+  }
+  .font-label-caps {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+  }
+  .font-headline-lg {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+  }
+  .font-display-lg {
+    font-size: 80px;
+    line-height: 96px;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Technical Background Pattern */
+.bg-grid-pattern {
+  background-image: 
+      linear-gradient(to right, var(--color-surface-container-highest) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-surface-container-highest) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
